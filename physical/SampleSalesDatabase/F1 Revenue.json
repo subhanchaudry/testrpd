@@ -1,0 +1,34 @@
+{
+  "physicalTable": {
+    "name": "F1 Revenue",
+    "sourceTable": "physicalTable:SampleSalesDatabase.SAMP_REVENUE_F",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:SampleSalesDatabase.D1 Time",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:SampleSalesDatabase.F1 Revenue.BILL_DAY_DT",
+            "rightColumn": "physicalColumn:SampleSalesDatabase.D1 Time.CALENDAR_DATE"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:SampleSalesDatabase.D2 Products",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:SampleSalesDatabase.F1 Revenue.PROD_KEY",
+            "rightColumn": "physicalColumn:SampleSalesDatabase.D2 Products.PROD_KEY"
+          }
+        ]
+      },
+      {
+        "rightTable": "physicalTable:SampleSalesDatabase.D3 Customers",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:SampleSalesDatabase.F1 Revenue.CUST_KEY",
+            "rightColumn": "physicalColumn:SampleSalesDatabase.D3 Customers.CUST_KEY"
+          }
+        ]
+      }
+    ]
+  }
+}

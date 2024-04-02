@@ -1,0 +1,23 @@
+{
+  "physicalTable": {
+    "name": "D3 Customers",
+    "sourceTable": "physicalTable:SampleSalesDatabase.SAMP_CUSTOMERS_D",
+    "caching": {
+      "enable": true
+    },
+    "joins": [      {
+        "rightTable": "physicalTable:SampleSalesDatabase.D4 Addresses",
+        "joinConditions": [          {
+            "leftColumn": "physicalColumn:SampleSalesDatabase.D3 Customers.ADDRESS_KEY",
+            "rightColumn": "physicalColumn:SampleSalesDatabase.D4 Addresses.ADDRESS_KEY"
+          }
+        ]
+      }
+    ],
+    "additionalKeys": [
+      [
+        "CUST_KEY"
+      ]
+    ]
+  }
+}
