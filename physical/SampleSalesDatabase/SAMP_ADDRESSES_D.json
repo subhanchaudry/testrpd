@@ -1,6 +1,7 @@
 {
   "physicalTable" : {
     "name" : "SAMP_ADDRESSES_D",
+    "description" : "Addresses",
     "sourceType" : "TABLE",
     "physicalColumns" : [ {
       "name" : "ADDRESS1",
